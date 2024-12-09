@@ -207,6 +207,7 @@ def chat():
 # Start the Flask app and expose via ngrok
 if __name__ == "__main__":
     port = 5000
+    ngrok.set_auth_token("2Q4Loh1ZFajp5PcidWlujOaMmig_6gaM7NebbZtnf5LFBmMat")
     public_url = ngrok.connect(port).public_url  # Create an ngrok tunnel
     logger.info(f"Ngrok public URL: {public_url}")  # Properly close the string
     app.run(host="0.0.0.0", port=port, debug=True)
