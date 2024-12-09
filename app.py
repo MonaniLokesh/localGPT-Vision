@@ -208,4 +208,5 @@ def chat():
 if __name__ == "__main__":
     port = 5000
     public_url = ngrok.connect(port).public_url  # Create an ngrok tunnel
-    logger.info(f"Ngrok public URL: {public_url
+    logger.info(f"Ngrok public URL: {public_url}")  # Properly close the string
+    app.run(host="0.0.0.0", port=port, debug=True)
